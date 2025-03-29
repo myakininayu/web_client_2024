@@ -4,7 +4,7 @@ import './App.css';
 import Header from './mycomponents/Header/Header';
 import Products from './mycomponents/Products/Products';
 import Start from './mycomponents/Start/Start'
-import Workers from './mycomponents/Workers/Workers'
+import Book from './mycomponents/Book/Book'
 import ProductForm from './mycomponents/Products/ProductForm/ProductForm';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Start/>}/>
         <Route path="/dishes" element={<Products/>}/>
-        <Route path="/workers" element={<Workers/>}/>
+        <Route path="/book" element={<Book/>}/>
         <Route path="/dishes_form/" element={<ProductForm/>}/>
         <Route path="/dishes_form/:id" element={<ProductForm/>}/>
       </Routes>

@@ -10,7 +10,7 @@ function Header() {
           <Navbar.Brand href="/">Вкусно как дома!</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/dishes">Меню</Nav.Link>
-            <Nav.Link href="/workers">Наши сотрудники</Nav.Link>
+            <Nav.Link href="/book">Забронировать</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
+import SimpleTextToSpeech from "../SimpleTextToSpeech";
 
 function Start() {
   return (
@@ -24,6 +25,8 @@ function Start() {
                 Новый день - новое блюдо!
                 Скидки и подарки ждут вас!
               </Card.Text>
+              <SimpleTextToSpeech text="Новый день - новое блюдо!
+                Скидки и подарки ждут вас!"></SimpleTextToSpeech>
             </Card.Body>
           </Card>
         </Col>
@@ -36,6 +39,8 @@ function Start() {
                 Скидки на завтраки, выпечку и кофе)
                 Только с 8.00 до 10.00
               </Card.Text>
+              <SimpleTextToSpeech text="Скидки на завтраки, выпечку и кофе)
+                Только с 8.00 до 10.00"></SimpleTextToSpeech>
             </Card.Body>
           </Card>
         </Col>
@@ -47,6 +52,7 @@ function Start() {
               <Card.Text>
                 Новый день - новое блюдо! Теперь в новом формате! Только в ноябре!
               </Card.Text>
+              <SimpleTextToSpeech text="Новый день - новое блюдо! Теперь в новом формате! Только в ноябре!"></SimpleTextToSpeech>
             </Card.Body>
           </Card>
         </Col>
