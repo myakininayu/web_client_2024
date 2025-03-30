@@ -1,11 +1,27 @@
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
-import SimpleTextToSpeech from "../SimpleTextToSpeech";
+import MyCard from './MyCard';
 
 function Start() {
+  const texts = [
+    {
+      title:"Акция 1",
+      img:"img/skidka.jpg",
+      text:"Новый день - новое блюдо! Скидки и подарки ждут вас!"
+    },
+    {
+      title:"Акция 2",
+      img:"img/skidka1.jpg",
+      text:"Скидки на завтраки, выпечку и кофе) Только с 8.00 до 10.00"
+    },
+    {
+      title:"Акция 3",
+      img:"img/skidka2.jpg",
+      text:"Новый день - новое блюдо! Теперь в новом формате! Только в ноябре!"
+    },
+  ]
   return (
     <>
     <Container>
@@ -16,47 +32,7 @@ function Start() {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <Card style={{ width: '25rem' }}>
-            <Card.Img width={300} height={250} variant="top" src="img/skidka2.jpg" />
-            <Card.Body>
-              <Card.Title>Акция 1</Card.Title>
-              <Card.Text>
-                Новый день - новое блюдо!
-                Скидки и подарки ждут вас!
-              </Card.Text>
-              <SimpleTextToSpeech text="Новый день - новое блюдо!
-                Скидки и подарки ждут вас!"></SimpleTextToSpeech>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-        <Card style={{ width: '25rem' }}>
-          <Card.Img width={300} height={250} variant="top" src="img/skidka1.jpg" />
-            <Card.Body>
-              <Card.Title>Акция 2</Card.Title>
-              <Card.Text>
-                Скидки на завтраки, выпечку и кофе)
-                Только с 8.00 до 10.00
-              </Card.Text>
-              <SimpleTextToSpeech text="Скидки на завтраки, выпечку и кофе)
-                Только с 8.00 до 10.00"></SimpleTextToSpeech>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-        <Card style={{ width: '25rem' }}>
-          <Card.Img width={300} height={250} variant="top" src="img/skidka.jpg" />
-            <Card.Body>
-              <Card.Title>Акция 3</Card.Title>
-              <Card.Text>
-                Новый день - новое блюдо! Теперь в новом формате! Только в ноябре!
-              </Card.Text>
-              <SimpleTextToSpeech text="Новый день - новое блюдо! Теперь в новом формате! Только в ноябре!"></SimpleTextToSpeech>
-            </Card.Body>
-          </Card>
-        </Col>
-        
+        {texts.map((t) => { return <Col><MyCard title={t.title} img={t.img} text={t.text}/></Col> })}
       </Row>
     </Container>
   

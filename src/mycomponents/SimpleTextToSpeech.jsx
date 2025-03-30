@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const SimpleTextToSpeech = (props) => {
-
   const speak = () => {
     if ('speechSynthesis' in window) {
       const utterance = new SpeechSynthesisUtterance(props.text);
@@ -13,14 +13,7 @@ const SimpleTextToSpeech = (props) => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <button 
-        onClick={speak}
-        style={{ padding: '10px 15px', cursor: 'pointer' }}
-      >
-        Озвучить
-      </button>
-    </div>
+    <div><Button variant="primary" onClick={speak}>Озвучить</Button></div>
   );
 };
 

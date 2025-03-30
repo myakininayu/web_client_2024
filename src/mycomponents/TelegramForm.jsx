@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 
 export default function TelegramForm() {
   const [isSent, setIsSent] = useState(false);
-  const [tableNumber, setTableNumber] = useState(""); // Кол-во гостей
+  const [guestsNumber, setGuestsNumber] = useState(""); 
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
 
@@ -19,14 +19,14 @@ export default function TelegramForm() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             chat_id: 835795557,
-            text: `Новое сообщение: Бронь стола ${tableNumber}, день: ${date},  время: ${time}`,
+            text: `Новое сообщение: Бронь стола на ${guestsNumber} гостей, день: ${date},  время: ${time}`,
           }),
         }
       );
       setIsSent(true);
       setDate("");
       setTime("");
-      setTableNumber("");
+      setGuestsNumber("");
     } catch (error) {
       console.error("Ошибка:", error);
     }
@@ -36,14 +36,14 @@ export default function TelegramForm() {
     <Form className="m-3">
       <Form.Group as={Row} className="mb-3">
         <Form.Label column sm="2">
-          Номер столика
+          Количество гостей
         </Form.Label>
         <Col sm="10">
           <Form.Control
             type="number"
-            value={tableNumber}
+            value={guestsNumber}
             onChange={(e) => {
-              setTableNumber(e.target.value);
+              setGuestsNumber(e.target.value);
               setIsSent(false);
             }}
           />
