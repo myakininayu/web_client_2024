@@ -35,9 +35,7 @@ export default function TelegramForm() {
   return (
     <Form className="m-3">
       <Form.Group as={Row} className="mb-3">
-        <Form.Label column sm="2">
-          Количество гостей
-        </Form.Label>
+        <Form.Label column sm="2">Количество гостей</Form.Label>
         <Col sm="10">
           <Form.Control
             type="number"
@@ -51,9 +49,7 @@ export default function TelegramForm() {
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3">
-        <Form.Label column sm="2">
-          Дата
-        </Form.Label>
+        <Form.Label column sm="2">Дата</Form.Label>
         <Col sm="10">
           <Form.Control
             type="date"
@@ -67,9 +63,7 @@ export default function TelegramForm() {
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3">
-        <Form.Label column sm="2">
-          Время
-        </Form.Label>
+        <Form.Label column sm="2">Время</Form.Label>
         <Col sm="10">
           <Form.Control
             type="time"
@@ -82,9 +76,7 @@ export default function TelegramForm() {
         </Col>
       </Form.Group>
 
-      <Button variant="primary" onClick={sendToTelegram}>
-        Сохранить
-      </Button>
+      <Button variant="primary" onClick={sendToTelegram}>Сохранить</Button>
       {isSent && <h2>Спасибо, заявка принята</h2>}
     </Form>
   );
