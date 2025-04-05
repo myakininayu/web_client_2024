@@ -2,6 +2,7 @@
   "name": "web_client_2024",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.8.4",
