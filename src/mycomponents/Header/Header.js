@@ -11,6 +11,7 @@ function Header() {
           <Nav className="me-auto">
             <Nav.Link href="/dishes">Меню</Nav.Link>
             <Nav.Link href="/book">Забронировать</Nav.Link>
+            <Nav.Link href="/dashboard">Дашборд</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

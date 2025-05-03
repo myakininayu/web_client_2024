@@ -7,12 +7,12 @@ function Book() {
       <>
        <Row className="justify-content-md-center m-5" >
         <Col>
-        <h2>Укажите количество гостей и выберете время визита, а мы подготовим его для вас!</h2>
+        <h2>Укажите количество гостей и выберете время визита, а мы подготовим столик для вас!</h2>
         </Col>
       </Row>
        <TelegramForm></TelegramForm>
       </>
     );
   }
-  
+
   export default Book;

@@ -122,9 +122,7 @@ function Products() {
                   setFilters({ ...filters, value: e.target.value })
                 }
                 placeholder={
-                  filters.operator === "text_search"
-                    ? "Введите текст..."
-                    : "Введите значение..."
+                    "Введите значение..."
                 }
               />
             </Form.Group>
@@ -139,7 +137,7 @@ function Products() {
           </Col>
         </Row>
       </Form>
-
+      
       {/* Сортировка */}
       <Form className="mb-4">
         <Row>
