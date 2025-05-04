@@ -8,15 +8,19 @@ const ChartTab = () => {
   const { excelData } = useExcelStore();
 
   return (
-        <div>
-          <h2>График данных</h2>
-          <Container>
-          <Row>
-            <Col><LineDataChart data={excelData} /></Col>
-            <Col><Stacked /></Col>
-          </Row>
-          </Container>
-        </div> 
+    <div>
+      <h2>График данных</h2>
+      <Container>
+        <Row>
+          <Col>
+            <LineDataChart data={excelData} />
+          </Col>
+          <Col>
+            <Stacked />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
